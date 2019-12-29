@@ -187,9 +187,9 @@ def post_login(cookie, tokens, username, password_enc, rsakey='', verifycode='',
 
         }
     req = requests.post(url, headers=headers_merged, cookies=cookie, data=data, timeout=50, verify=False)
-    xbmc.log(msg=req, level=xbmc.LOGDEBUG)
-    dialog.ok('Error', req)
     content = req.text
+    xbmc.log(msg='-------------------------------------', level=xbmc.LOGDEBUG)
+    xbmc.log(msg=content, level=xbmc.LOGDEBUG)
     if content:
         match = re.search('"(err_no[^"]+)"', content)
         if not match:
