@@ -187,6 +187,7 @@ def post_login(cookie, tokens, username, password_enc, rsakey='', verifycode='',
 
         }
     req = requests.post(url, headers=headers_merged, cookies=cookie, data=data, timeout=50, verify=False)
+    print(req)
     content = req.text
     if content:
         match = re.search('"(err_no[^"]+)"', content)
