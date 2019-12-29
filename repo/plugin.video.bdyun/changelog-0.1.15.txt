@@ -1,3 +1,6 @@
+V0.1.15 2017-03-28 
+-use kodi default player to play music
+
 V0.1.14 2017-03-28 
 -use kodi default player to play music
 
