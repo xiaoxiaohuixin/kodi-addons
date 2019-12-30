@@ -96,6 +96,8 @@ def run(username,password):
             return auth_cookie,tokens
 
     else:
-        dialog.ok('Error',u'未知错误，请重试')
+        dialog.ok('Error',str(err_no))
+        dialog.ok('Error',u'123')
+
     
     return None,None
